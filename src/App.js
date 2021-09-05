@@ -1,24 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import './App.css'
+import SignInOrUp from './loginAndRegister/Components/loginAndRegisterForm';
+import Home from './loginAndRegister/Components/Home'
+import Profile from './loginAndRegister/Components/Profile'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import UserContextState from './Contexts/User/UserContextState'
+import Navbar from './loginAndRegister/Components/Navbar';
+import Search from './loginAndRegister/Components/Search';
+
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <UserContextState>
+      <Router>
+        <Navbar />
+
+        <Switch>
+        
+          <Route exact path={'/home'}>
+            <Home />
+          </Route>
+
+          <Route exact path='/profile'>
+            <Profile />
+          </Route>
+
+
+          <Route exact path='/search'>
+            <Search />
+          </Route>
+
+
+          <Route exact path={['/', '/loginOrRegister']}>
+            <SignInOrUp />
+          </Route>
+
+
+
+        </Switch>
+      </Router>
+    </UserContextState>
+
   );
 }
 
