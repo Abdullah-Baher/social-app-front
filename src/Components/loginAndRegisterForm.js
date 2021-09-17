@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { useHistory } from 'react-router'
 import styled from 'styled-components'
-import api from '../../api/api';
-import UserContext from '../../Contexts/User/UserContext'
+import api from '../api/api';
+import UserContext from '../Contexts/User/UserContext'
 
 
 const Container = styled.div`
@@ -114,6 +114,7 @@ const SignInOrUp = () => {
         if(currForm === 0){
             const data = getMainData();
             const response = await api.LoginUser(data);
+            console.log(response);
             moveToHome(response)
         }
         else{

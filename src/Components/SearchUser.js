@@ -1,9 +1,9 @@
 import React, { useState, useRef, useContext } from 'react'
 import styled from 'styled-components'
-import api from '../../api/api'
+import api from '../api/api'
 import { AiOutlineSearch } from 'react-icons/ai'
 import { useHistory } from 'react-router'
-import UserContext from '../../Contexts/User/UserContext'
+import UserContext from '../Contexts/User/UserContext'
 
 
 const SearchBar = styled.input.attrs({

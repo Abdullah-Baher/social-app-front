@@ -1,8 +1,8 @@
 import React, { useContext, useRef } from 'react'
 import styled from 'styled-components'
 import { AiFillHeart, AiFillLike } from 'react-icons/ai'
-import api from '../../api/api'
-import UserContext from '../../Contexts/User/UserContext'
+import api from '../api/api'
+import UserContext from '../Contexts/User/UserContext'
 import { useHistory } from 'react-router'
 
 
@@ -99,7 +99,7 @@ const Post = ({ post }) => {
     const changeFollowColor = async() => {
         if(followButton.current.style.color !== 'red'){
             const response = await api.updateFollow(post.createdBy._id, localStorage.getItem('accessToken'), 'follow');
-        
+            
             if(!response.message){
                 followButton.current.style.color = 'red';
                 user.following.push(post.createdBy._id);

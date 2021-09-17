@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react'
 import CreatePost from './CreatePost'
 import Post from './Post'
-import api from '../../api/api';
-import UserContext from '../../Contexts/User/UserContext';
+import api from '../api/api';
+import UserContext from '../Contexts/User/UserContext';
 
 const Profile = () => {
     const user = useContext(UserContext);

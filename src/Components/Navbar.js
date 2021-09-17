@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import NavLink from './NavLink'
 import styled from 'styled-components'
-import UserContext from '../../Contexts/User/UserContext'
+import UserContext from '../Contexts/User/UserContext'
 const Navbar = () => {
     const NavbarContainer = styled.div`
         height: 50px;

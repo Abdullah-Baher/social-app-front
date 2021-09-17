@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import SearchUser from './SearchUser'
-import UserContext from '../../Contexts/User/UserContext'
+import UserContext from '../Contexts/User/UserContext'
 import Post from './Post'
 
 

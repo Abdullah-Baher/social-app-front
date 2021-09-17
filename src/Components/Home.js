@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import Post from './Post'
-import api from '../../api/api';
-import UserContext from '../../Contexts/User/UserContext'
+import api from '../api/api';
+import UserContext from '../Contexts/User/UserContext'
 
 const Home = () => {
     const [ posts, setPosts ] = useState({});

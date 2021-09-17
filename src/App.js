@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import './App.css'
-import SignInOrUp from './loginAndRegister/Components/loginAndRegisterForm';
-import Home from './loginAndRegister/Components/Home'
-import Profile from './loginAndRegister/Components/Profile'
+import SignInOrUp from './Components/loginAndRegisterForm';
+import Home from './Components/Home'
+import Profile from './Components/Profile'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import UserContextState from './Contexts/User/UserContextState'
-import Navbar from './loginAndRegister/Components/Navbar';
-import Search from './loginAndRegister/Components/Search';
+import Navbar from './Components/Navbar';
+import Search from './Components/Search';
 
 
 
